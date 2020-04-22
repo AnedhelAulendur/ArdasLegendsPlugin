@@ -1,0 +1,27 @@
+name: ArdasLegendsPlugin
+main: com.github.AnedhelAulendur.ArdasLegendsPlugin
+author: Moritz R. -alias- Anedhel
+version: 0.3
+commands:
+    hunt:
+        description: Use this command to hunt a player.
+        usage: /<command> [player]
+        permission: ArdasLegendsPlugin.hunt
+        permission-message: you are not permitted to use this command.
+    aid:
+        description: Use this command to aid a player in a hunt.
+        usage: /<command> [player]
+        permission: ArdasLegendsPlugin.aid
+        permission-message: you are not permitted to use this command.
+permissions:
+    ArdasLegendsPlugin.*:
+        description: is giving access to all the plugin commands
+        children:
+        ArdasLegendsPlugin.hunt: true
+        ArdasLegendsPlugin.aid: true
+    ArdasLegendsPlugin.hunt:
+        description: allows a user to use the hunt command
+        default: true
+    ArdasLegendsPlugin.aid:
+        description: allows a user to use the aid command
+        default:true
