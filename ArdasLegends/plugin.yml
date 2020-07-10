@@ -1,0 +1,48 @@
+name: ArdasLegends
+version: 0.5.1
+description: A plugin for the Ardas Legends - Lord of the Rings Minecraft Server.
+
+author: Anedhel_Aulendur
+
+main: com.github.AnedhelAulendur.ArdasLegends
+database: false
+prefix: ArdasLegends
+default-permission: true
+
+commands:
+    hunt:
+        description: This command is used to hunt a player.
+        aliases: hunting
+        permission: ArdasLegends.hunt
+        usage: Syntax error! Perhaps you meant /<command> PlayerName?
+    aid:
+        description: This command is used to aid a hunter or hunted.
+        aliases: aiding
+        permission: ArdasLegends.aid
+        usage: Syntax error! Perhaps you meant /<command> PlayerName?
+    buildmode:
+       description: This command is to toggle the buildmode.
+       aliases: bm
+       permission: ArdasLegends.buildmode
+       usage: Syntax error! Perhaps you meant /buildmode?
+
+permissions:
+    ArdasLegends.*:
+        description: Gives access to all ArdasLegends commands
+        children:
+            ArdasLegends.hunt: true
+            ArdasLegends.aid: true
+            ArdasLegends.buildmode: false
+            ArdasLegends.huntstop: false
+    ArdasLegends.hunt:
+        description: Gives access to the hunting command.
+        default: true
+    ArdasLegends.aid:
+        description: Gives access to the aiding command.
+        default: true
+    ArdasLegends.buildmode:
+        description: Gives access to the buildmode.
+        default: false
+    ArdasLegends.huntstop:
+        description: Gives permission to stop a hunt.
+        default: false
